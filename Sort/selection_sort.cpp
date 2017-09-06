@@ -1,5 +1,5 @@
 /*Complexity: worst case: O(n^2).
-              best case: O(n).
+              best case: O(n^2).
               */
 #include <bits/stdc++.h>
 
