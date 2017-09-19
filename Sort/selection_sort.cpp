@@ -2,6 +2,7 @@
               best case: O(n^2).
               */
 #include <bits/stdc++.h>
+#define N 100
 
 using namespace std;
 
@@ -26,12 +27,12 @@ int main(){
     cout << "input size: ";
     cin >> n;
 
+    srand(time(NULL));
     for(int i = 0; i < n; i++){
-        cout << "Number[" << i+1 << "]: ";
-        cin >> a;
+        a = rand()%N;
         vet.push_back(a);
     }
-
+  
     selection_sort(vet);
 
     cout << endl << "Numbers sorted: ";
