@@ -27,10 +27,12 @@ int main(){
     cout << "input size: ";
     cin >> n;
 
+    cout << "Random numbers:";
     srand(time(NULL));
     for(int i = 0; i < n; i++){
         a = rand()%N;
         vet.push_back(a);
+        cout << " " << a;
     }
   
     selection_sort(vet);
