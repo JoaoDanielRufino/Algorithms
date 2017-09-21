@@ -7,13 +7,17 @@
 using namespace std;
 
 void selection_sort(vector<int> &vet){
+    int min;
     for(int i = 0; i < vet.size()-1; i++){
+        min = i;
         for(int j = i+1; j < vet.size(); j++){
-            if(vet[i] > vet[j]){
-                vet[i] = vet[i] ^ vet[j];
-                vet[j] = vet[i] ^ vet[j];
-                vet[i] = vet[i] ^ vet[j];
-            }
+            if(vet[min] > vet[j])
+                min = j;
+        }
+        if(vet[min] != vet[i]){
+            vet[i] = vet[i] ^ vet[min];
+            vet[min] = vet[i] ^ vet[min];
+            vet[i] = vet[i] ^ vet[min];
         }
     }
 }
@@ -34,7 +38,7 @@ int main(){
         vet.push_back(a);
         cout << " " << a;
     }
-  
+
     selection_sort(vet);
 
     cout << endl << "Numbers sorted: ";
