@@ -53,7 +53,7 @@ int main(){
 
     quick_sort(vet, 0, n-1);
 
-    cout << endl << endl << "Numbers sorted: ";
+    cout << endl << "Numbers sorted: ";
     for(int i = 0; i < n; i++)
         cout << vet[i] << " ";
 
