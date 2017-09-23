@@ -63,7 +63,7 @@ int sum(int *st, int lastpos, int qs, int qe){
 
 int main(){
 
-    ios::sync_with_stdio(false); //cin.tie(0);
+    ios::sync_with_stdio(false);
     int *st,*vet,n,a,b;
 
     cout << "input size: ";
