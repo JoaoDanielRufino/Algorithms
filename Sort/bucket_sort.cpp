@@ -12,10 +12,8 @@ void bucket_sort(vector<int> &vet){
         aux[vet[i]]++;
     int i = 0;
     for(int j = 0; j < N; j++){
-        while(aux[j] > 0){
-            aux[j] -= 1;
+        while(aux[j]--)
             vet[i++] = j;
-        }
     }
 }
 
