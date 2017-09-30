@@ -196,7 +196,7 @@ int main(){
    remove_edge(g, 2, 3);
    remove_edge(g, 1, 2);
 
-   printf("\nRemoved edge:\n");
+   printf("\nRemoved edges:\n");
    print(g);
    printf("\n");
    show_graph(g);
