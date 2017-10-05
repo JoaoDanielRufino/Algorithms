@@ -6,7 +6,7 @@ typedef struct stacknode{
     struct stacknode *prev;
 }StackNode;
 
-typedef struct stack {
+typedef struct stack{
     int size;
     StackNode *last;
 }Stack;
