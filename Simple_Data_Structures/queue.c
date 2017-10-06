@@ -57,8 +57,6 @@ void pop(Queue* q){
 }
 
 int top(Queue* q){
-  if(empty(q))
-    return;
   return q->head->data;
 }
 
