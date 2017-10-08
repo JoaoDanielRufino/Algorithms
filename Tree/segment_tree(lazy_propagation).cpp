@@ -87,7 +87,7 @@ void initiate_st(int *vet, int n){
 
 int main(){
 
-    ios::sync_with_stdio(false); //cin.tie(0);
+    ios::sync_with_stdio(false);
     int n,a,b,v,*vet;
 
 	cout << "input size: ";
