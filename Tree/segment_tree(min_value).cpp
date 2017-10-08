@@ -15,9 +15,9 @@ void update_st(int *st, int left, int right, int i, int data, int index){
     }
 }
 
-void update_value(int *vet, int *st, int lastpos, int i, int data){
+void update_value(int *vet, int *st, int n, int i, int data){
     vet[i] = data;
-    update_st(st, 0, lastpos, i, data, 0);
+    update_st(st, 0, n-1, i, data, 0);
 }
 
 int get_min(int *st, int left, int right, int qs, int qe, int index){
@@ -32,8 +32,8 @@ int get_min(int *st, int left, int right, int qs, int qe, int index){
            get_min(st, mid+1, right, qs, qe, index*2+2));
 }
 
-int minimum_value(int *st, int lastpos, int qs, int qe){
-    return get_min(st, 0, lastpos, qs, qe, 0);
+int minimum_value(int *st, int n, int qs, int qe){
+    return get_min(st, 0, n-1, qs, qe, 0);
 }
 
 int make_st(int *vet, int left, int right, int *st, int index){
@@ -80,15 +80,15 @@ int main(){
 
     cout << endl << endl << "Range [Ai-Aj]: ";
     cin >> a >> b;
-    cout << "Minimum value of [" << a << "-" << b << "]" << " = " << minimum_value(st, n-1, a, b) << endl;
+    cout << "Minimum value of [" << a << "-" << b << "]" << " = " << minimum_value(st, n, a, b) << endl;
 
     cout << "Update a value [pos-value]: ";
     cin >> a >> b;
-    update_value(vet, st, n-1, a, b);
+    update_value(vet, st, n, a, b);
 
     cout << "New range [Ai-Aj]: ";
     cin >> a >> b;
-    cout << "Minimum value of [" << a << "-" << b << "]" << " = " << minimum_value(st, n-1, a, b) << endl;
+    cout << "Minimum value of [" << a << "-" << b << "]" << " = " << minimum_value(st, n, a, b) << endl;
 
     return 0;
 }
