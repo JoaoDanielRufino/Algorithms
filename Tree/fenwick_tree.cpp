@@ -36,37 +36,37 @@ int* construct(vector<int> vet, int n){
 
 int main(){
 
-	  ios::sync_with_stdio(false); //cin.tie(0);
-    int n,a,*tree,v;
-	  vector<int> vet;
+	ios::sync_with_stdio(false);
+    	int n,a,*tree,v;
+	vector<int> vet;
 
-	  cout << "input size: ";
-    cin >> n;
-	  tree = new int[n+1];
+	cout << "input size: ";
+    	cin >> n;
+	tree = new int[n+1];
 
-	  cout << "Random numbers: ";
-	  srand(time(NULL));
-	  for(int i = 0; i < n; i++){
-      a = rand()%N;
-      vet.push_back(a);
-      cout << " " << a;
-	  }
+	cout << "Random numbers: ";
+	srand(time(NULL));
+	for(int i = 0; i < n; i++){
+      		a = rand()%N;
+      		vet.push_back(a);
+      		cout << " " << a;
+	}
 
-	  tree = construct(vet, n);
+	tree = construct(vet, n);
 
-	  cout << endl << endl << "Index for the sum: ";
-    cin >> a;
-    cout << "Sum of values [0-" << a << "]" << " = " << sum(tree, a) << endl;
+	cout << endl << endl << "Index for the sum: ";
+    	cin >> a;
+    	cout << "Sum of values [0-" << a << "]" << " = " << sum(tree, a) << endl;
 
-    cout << "Update a value [index-value]: ";
-    cin >> a >> v;
-    update(tree, n, a, v);
+    	cout << "Update a value [index-value]: ";
+    	cin >> a >> v;
+    	update(tree, n, a, v);
 
-    cout << "New index for the sum: ";
-    cin >> a;
-    cout << "Sum of updated values [0-" << a << "]" << " = " << sum(tree, a) << endl;
+    	cout << "New index for the sum: ";
+    	cin >> a;
+    	cout << "Sum of updated values [0-" << a << "]" << " = " << sum(tree, a) << endl;
 
-	  cout << endl;
+	cout << endl;
 
     return 0;
 }
