@@ -87,12 +87,12 @@ void initiate_st(int *vet, int n){
 
 int main(){
 
-    ios::sync_with_stdio(false);
-    int n,a,b,v,*vet;
+    	ios::sync_with_stdio(false);
+    	int n,a,b,v,*vet;
 
 	cout << "input size: ";
-    cin >> n;
-    vet = new int[n];
+    	cin >> n;
+    	vet = new int[n];
 
 	cout << "Random numbers: ";
 	srand(time(NULL));
@@ -105,16 +105,16 @@ int main(){
 	initiate_st(vet, n);
 
 	cout << endl << endl << "Range [Ai-Aj]: ";
-    cin >> a >> b;
-    cout << "Sum of values [" << a << "-" << b << "]" << " = " << sum(n, a, b) << endl;
+    	cin >> a >> b;
+    	cout << "Sum of values [" << a << "-" << b << "]" << " = " << sum(n, a, b) << endl;
 
-    cout << "Update a value in range [Ai-Aj-value]: ";
-    cin >> a >> b >> v;
-    update_range(n, a, b, v);
+    	cout << "Update a value in range [Ai-Aj-value]: ";
+    	cin >> a >> b >> v;
+    	update_range(n, a, b, v);
 
-    cout << "New range [Ai-Aj]: ";
-    cin >> a >> b;
-    cout << "Sum of updated values [" << a << "-" << b << "]" << " = " << sum(n, a, b) << endl;
+    	cout << "New range [Ai-Aj]: ";
+    	cin >> a >> b;
+    	cout << "Sum of updated values [" << a << "-" << b << "]" << " = " << sum(n, a, b) << endl;
 
 	cout << endl;
     return 0;
