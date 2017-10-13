@@ -56,7 +56,7 @@ void pop(Queue* q){
     q->size--;
 }
 
-int top(Queue* q){
+int front(Queue* q){
   return q->head->data;
 }
 
