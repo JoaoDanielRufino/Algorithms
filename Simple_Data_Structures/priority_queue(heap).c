@@ -11,7 +11,7 @@ typedef struct priorityqueue{
     Heapnode *heap;
 }Priorityqueue;
 
-void make_queue(Priorityqueue* pqueue, int n){
+void make_pqueue(Priorityqueue* pqueue, int n){
     pqueue->size = 0;
     pqueue->heap = (Heapnode*) malloc((n+1)*sizeof(Heapnode));
 }
