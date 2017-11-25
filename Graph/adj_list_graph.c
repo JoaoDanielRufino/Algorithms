@@ -11,11 +11,11 @@ typedef struct node{
    struct node *prox;
 }Node;
 
-struct graph{
+typedef struct graph{
    int num_vert,num_edge;
    int *degree;
    Node **edge;
-};
+}Graph;
 
 Graph* make_graph(int num_vert){
    if(num_vert <= 0)
