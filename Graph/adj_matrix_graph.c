@@ -6,11 +6,11 @@
 #include "queue.h"
 #define MAX 10101010
 
-struct graph{
+typedef struct graph{
    int num_vert, num_edge;
    int *degree;
    int **edge;
-};
+}Graph;
 
 Graph* make_graph(int num_vert){
    if(num_vert <= 0)
