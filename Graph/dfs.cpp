@@ -19,7 +19,7 @@ void dfs(int u){
 
 int main(){
 
-    ios::sync_with_stdio(false); //cin.tie(0);
+    ios::sync_with_stdio(false);
     int n,m,a,b;
 
     cout << "Enter with the number of vertices: ";
