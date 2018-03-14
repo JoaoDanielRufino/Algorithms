@@ -39,7 +39,7 @@ int main(){
 
     cout << "DFS order: ";
 
-    //Check disconected components
+    //Checking disconected components
     for(int i = 0; i < n; i++){
         if(!seen[i])
             dfs(i);
