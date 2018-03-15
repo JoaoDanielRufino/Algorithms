@@ -44,6 +44,7 @@ int main(){
     for(int i = 0; i < m; i++){
         cin >> a >> b;
         vet[a].push_back(b);
+        vet[b].push_back(a);
     }
 
     cout << "BFS order: ";
