@@ -3,7 +3,7 @@
 using namespace std;
 
 vector< vector<int> > vet;
-vector<int> seen;
+vector<bool> seen;
 
 void bfs(int u){
     queue<int> q;
