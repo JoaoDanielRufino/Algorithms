@@ -23,7 +23,7 @@ int main(){
     int val;
     vector<int> vet;
 
-    vet.push_back(1); //Exemple of coins.
+    vet.push_back(1); //Example of coins.
     vet.push_back(5);
     vet.push_back(10);
     vet.push_back(25);
