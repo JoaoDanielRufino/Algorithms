@@ -47,7 +47,7 @@ int isEulerian(){
 
     int odd = 0;
     for(int i = 0; i < vet.size(); i++){
-        if(vet[i].size() & 1) //That's the same as (vet[i].size() % 2) != 0
+        if(vet[i].size() & 1) //That's the same as (vet[i].size() % 2) == 1
             odd++;
     }
 
