@@ -1,5 +1,5 @@
 /*Complexity: worst case: O(n^2).
-              best case: O(n log(n).
+              best case: O(n log(n)).
               */
 #include <bits/stdc++.h>
 #define N 100
