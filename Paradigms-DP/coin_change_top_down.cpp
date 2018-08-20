@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int dp[10005][5]; //Max value+1 | qtd of coins.
+int dp[10005][5]; //Max value+1 | qty of coins.
 
 long long int coin_change(vector<int> vet, int value, int index){
     if(!value)
