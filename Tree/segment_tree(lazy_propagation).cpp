@@ -65,7 +65,7 @@ int sum(int n, int qs, int qe){
 	return get_sum(0, n-1, qs, qe, 0);
 }
 
-void contruct(int *vet, int left, int right, int index){
+void construct(int *vet, int left, int right, int index){
 	if(left > right)
 		return;
 
@@ -75,14 +75,14 @@ void contruct(int *vet, int left, int right, int index){
 	}
 
 	int mid = (left + right)/2;
-	contruct(vet, left, mid, index*2+1);
-	contruct(vet, mid+1, right, index*2+2);
+	construct(vet, left, mid, index*2+1);
+	construct(vet, mid+1, right, index*2+2);
 
 	tree[index] = tree[index*2+1] + tree[index*2+2];
 }
 
 void initiate_st(int *vet, int n){
-	contruct(vet, 0, n-1, 0);
+	construct(vet, 0, n-1, 0);
 }
 
 int main(){
