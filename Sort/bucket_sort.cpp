@@ -1,5 +1,5 @@
-/*Complexity: worst case: O(n).
-              best case: O(n).
+/*Complexity: worst case: O(n+N).
+              best case: O(n+N).
               */
 #include <bits/stdc++.h>
 #define N 100
