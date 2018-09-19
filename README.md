@@ -1,2 +1,2 @@
 # Algorithms
-Useful algorithms for competitive programing
+Useful algorithms for competitive programming
