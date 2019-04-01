@@ -39,7 +39,7 @@ bool solve(int mat[N][N], int col) {
             mat[i][col] = 1;
             if (solve(mat, col + 1))
                 return true;
-            mat[i][col] = 0;
+            mat[i][col] = 0; //Backtracking
         }
     }
 
