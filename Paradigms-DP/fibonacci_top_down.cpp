@@ -3,14 +3,14 @@
 
 using namespace std;
 
-unsigned long long int dp[90];
+long long int dp[90];
 
-unsigned long long int fib(int n) {
+long long int fib(int n) {
   if(!n)
-    return 0ULL;
+    return 0LL;
 
   if(n == 1)
-    return 1ULL;
+    return 1LL;
 
   if(dp[n] != -1)
     return dp[n];
