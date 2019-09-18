@@ -1,3 +1,7 @@
+// https://www.geeksforgeeks.org/disjoint-set-data-structures/
+// Find -> O(log n)
+// Union -> O(log n)
+
 #include <iostream>
 
 using namespace std;
