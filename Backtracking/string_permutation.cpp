@@ -1,4 +1,4 @@
-// O(n*n!), n! permutations, and O(n) to print all strings
+// O(n!)
 
 #include <iostream>
 
