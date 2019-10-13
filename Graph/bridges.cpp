@@ -48,7 +48,7 @@ int main(){
     low_time.assign(n, 0);
     discovery_time.assign(n, 0);
 
-    cout << "Enter with V and E: " << endl;
+    cout << "Enter the edges: " << endl;
     for(int i = 0; i < m; i++){
         cin >> a >> b;
         vet[a].push_back(b);

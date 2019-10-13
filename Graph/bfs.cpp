@@ -40,7 +40,7 @@ int main(){
     vet.assign(n, vector<int> ());
     seen.assign(n, false);
 
-    cout << "Enter with V and E: " << endl;
+    cout << "Enter the edges: " << endl;
     for(int i = 0; i < m; i++){
         cin >> a >> b;
         vet[a].push_back(b);
