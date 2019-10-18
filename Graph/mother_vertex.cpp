@@ -1,5 +1,6 @@
 // Mother vertex is a vertex v such that all other vertices in Graph
 // can be reached by a path from v.
+// Complexity: O(V + E)
 
 #include <iostream>
 #include <vector>
