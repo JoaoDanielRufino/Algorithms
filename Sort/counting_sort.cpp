@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void bucket_sort(vector<int> &vet){
+void counting_sort(vector<int> &vet){
     int aux[N] = {0};
     for(int i = 0; i < vet.size(); i++)
         aux[vet[i]]++;
@@ -34,7 +34,7 @@ int main(){
         cout << " " << a;
     }
 
-    bucket_sort(vet);
+    counting_sort(vet);
 
     cout << endl << "Numbers sorted: ";
     for(int i = 0; i < n; i++)
