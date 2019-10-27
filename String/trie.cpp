@@ -80,9 +80,7 @@ class Trie {
     }
 
     void printSorted() {
-      Node *tmp = root;
-
-      printTrie(tmp, "");
+      printTrie(root, "");
     }
 };
 
