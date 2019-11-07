@@ -37,3 +37,32 @@ public:
         return true;
     }
 };
+
+// Or just do a simple Inorder traversal
+/*
+class Solution {
+public:
+    bool isValidBST(TreeNode* root) {
+        stack<TreeNode*> st;
+        TreeNode *prev = nullptr;
+    
+        while(!st.empty() || root) {
+            while(root) {
+                st.push(root);
+                root = root->left;
+            }
+            
+            root = st.top();
+            st.pop();
+            
+            if(prev && root->val <= prev->val)
+                return false;
+            
+            prev = root;
+            root = root->right;
+        }
+        
+        return true;
+    }
+};
+*/
