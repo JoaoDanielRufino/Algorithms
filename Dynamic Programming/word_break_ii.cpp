@@ -17,11 +17,11 @@ public:
             res.push_back(s);
         
         for(int i = 1; i < s.size(); i++) {
-            string prefix = s.substr(0, i);
-            if(st.count(prefix)) {           
-                vector<string> aux = solve(s.substr(i, s.size()-i), st);
+            string sufix = s.substr(i);
+            if(st.count(sufix)) {           
+                vector<string> aux = solve(s.substr(0, i), st);
                 for(int i = 0; i < aux.size(); i++)
-                    res.push_back(prefix + " " + aux[i]);
+                    res.push_back(aux[i] + " " + sufix);
             }
         }
         
