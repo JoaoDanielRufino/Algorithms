@@ -20,8 +20,8 @@ public:
             string sufix = s.substr(i);
             if(st.count(sufix)) {           
                 vector<string> aux = solve(s.substr(0, i), st);
-                for(int i = 0; i < aux.size(); i++)
-                    res.push_back(aux[i] + " " + sufix);
+                for(int j = 0; j < aux.size(); j++)
+                    res.push_back(aux[j] + " " + sufix);
             }
         }
         

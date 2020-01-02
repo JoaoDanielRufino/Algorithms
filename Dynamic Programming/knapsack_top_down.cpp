@@ -1,4 +1,4 @@
-//Example uri 1286 exercise
+//Example uri 1286
 #include <bits/stdc++.h>
 
 using namespace std;

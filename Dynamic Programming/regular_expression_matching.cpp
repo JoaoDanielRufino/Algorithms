@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/regular-expression-matching/submissions/
+// https://leetcode.com/problems/regular-expression-matching/
 
 class Solution {
 public:
