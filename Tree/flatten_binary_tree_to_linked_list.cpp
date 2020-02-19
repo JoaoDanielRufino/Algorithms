@@ -37,7 +37,7 @@ public:
     }
 };
 
-/* Or this
+// Or this
 class Solution {
 public:
     vector<TreeNode*> aux;
@@ -62,4 +62,3 @@ public:
         }
     }
 };
-*/
