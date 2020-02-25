@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<int> computeLogestPrefixSufix(string pattern) {
+vector<int> computeLongestPrefixSufix(string pattern) {
   int i = 1, index = 0;
   vector<int> lps(pattern.size(), 0);
 
@@ -25,7 +25,7 @@ vector<int> computeLogestPrefixSufix(string pattern) {
 
 int kmpSearch(string str, string pattern) {
   int i = 0, j = 0;
-  vector<int> lps = computeLogestPrefixSufix(pattern);
+  vector<int> lps = computeLongestPrefixSufix(pattern);
 
   while(i < str.size() && j < pattern.size()) {
     if(str[i] == pattern[j]) {
