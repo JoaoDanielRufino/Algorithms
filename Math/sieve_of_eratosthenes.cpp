@@ -29,8 +29,6 @@ vector<int> sieve(int n) {
     return res;
 }
 
-using namespace std;
-
 int main() {
 
   int n = 181;
