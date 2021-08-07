@@ -18,8 +18,6 @@ bool isPrime(int n) {
   return true;
 }
 
-using namespace std;
-
 int main() {
 
   int n = 181;
