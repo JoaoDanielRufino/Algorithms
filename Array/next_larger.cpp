@@ -2,14 +2,15 @@
 
 vector<int> solution(vector<int> a) {
     stack<int> st;
-    vector<int> ans(a.size());
+    vector<int> ans(a.size(), -1);
     
-    for(int i = a.size()-1; i >= 0; i--) {
-        while(!st.empty() && st.top() <= a[i]) {
+    for(int i = 0; i < a.size(); i++) {
+        while(!st.empty() && a[i] > a[st.top()]) {
+            ans[st.top()] = a[i];
             st.pop();
         }
-        ans[i] = st.empty() ? -1 : st.top();
-        st.push(a[i]);
+        
+        st.push(i);
     }
     
     return ans;
