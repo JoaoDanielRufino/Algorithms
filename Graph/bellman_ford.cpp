@@ -10,7 +10,7 @@ void addEdge(vector< pair<int, pair< int, int> > > &edges, int u, int v, int w) 
   edges.push_back(make_pair(w, make_pair(u, v)));
 }
 
-void BelmanFord(vector< pair<int, pair< int, int> > > edges, int v, int src, int end) {
+void BellmanFord(vector< pair<int, pair< int, int> > > edges, int v, int src, int end) {
   vector<int> dist(v, INT_MAX);
 
   dist[src] = 0;
@@ -51,7 +51,7 @@ int main() {
   addEdge(edges, 3, 1, 1);
   addEdge(edges, 4, 3, -3);
 
-  BelmanFord(edges, v, 0, 3);
+  BellmanFord(edges, v, 0, 3);
 
   return 0;
 }
