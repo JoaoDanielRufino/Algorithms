@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/
+
 class Solution {
 public:
     vector<int> solve(vector<vector<int>>& graph, int current, int parent, string& labels, vector<int>& ans) {
