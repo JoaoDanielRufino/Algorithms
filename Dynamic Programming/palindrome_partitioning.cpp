@@ -25,8 +25,9 @@ public:
             return;
         }
         
+        int len = 1;
         for(int i = start; i < s.size(); i++) {
-            string sub = s.substr(start, i-start+1);
+            string sub = s.substr(start, len++);
             if(isPalindrome(sub)) {
                 curr.push_back(sub);
                 solve(s, i+1, curr);
