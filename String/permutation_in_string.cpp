@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/permutation-in-string/description/
+
 class Solution {
 public:
     bool equal(vector<int>& a, vector<int>& b) {
