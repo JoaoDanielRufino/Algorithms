@@ -19,9 +19,6 @@ public:
     }
     
     int jump(vector<int>& nums) {
-        if(nums[0] == 25000) // Dirty job, avoiding TLE case, just remember the recursion logic
-            return 2;
-        
         vector<int> dp(nums.size(), -1);
         
         return solve(nums, 0, dp);
