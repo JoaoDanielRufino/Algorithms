@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/jump-game-ii/submissions/
+// https://leetcode.com/problems/jump-game-ii/
 
 class Solution {
 public:
