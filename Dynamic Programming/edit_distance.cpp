@@ -1,43 +1,26 @@
-// https://www.geeksforgeeks.org/edit-distance-dp-5/
+// https://leetcode.com/problems/edit-distance/description/
 
-#include <iostream>
+class Solution {
+public:
+    int solve(string a, string b, int i, int j, vector<vector<int>>& dp) {
+        if(i == a.size())
+            return b.size() - j;
 
-using namespace std;
+        if(j == b.size())
+            return a.size() - i;
 
-int dp[500][500];
+        if(dp[i][j] != -1)
+            return dp[i][j];
 
-int solve(string s1, string s2, int i, int j) {
-  if(!i)
-    return j;
+        if(a[i] != b[j])
+            return dp[i][j] = 1 + min({solve(a, b, i + 1, j, dp), solve(a, b, i, j + 1, dp), solve(a, b, i + 1, j + 1, dp)}); // remove, insert or replace
 
-  if(!j)
-    return i;
-
-  if(dp[i][j] != -1)
-    return dp[i][j];
-
-  if(s1[i-1] == s2[j-1])
-    return dp[i][j] = solve(s1, s2, i-1, j-1);
-
-  int insert = solve(s1, s2, i, j-1);
-  int remove = solve(s1, s2, i-1, j);
-  int replace = solve(s1, s2, i-1, j-1);
-
-  return dp[i][j] = 1 + min(insert, min(remove, replace));
-}
-
-int main() {
-
-  string s1 = "intention";
-  string s2 = "execution";
-
-  for(int i = 0; i <= s1.size(); i++) {
-    for(int j = 0; j <= s2.size(); j++) {
-      dp[i][j] = -1;
+        return dp[i][j] = solve(a, b, i + 1, j + 1, dp); // do nothing 
     }
-  }
 
-  cout << solve(s1, s2, s1.size(), s2.size()) << endl;
+    int minDistance(string word1, string word2) {
+        vector<vector<int>> dp(word1.size(), vector<int> (word2.size(), -1));
 
-  return 0;
-}
+        return solve(word1, word2, 0, 0, dp);
+    }
+};
