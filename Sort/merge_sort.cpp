@@ -10,14 +10,12 @@ using namespace std;
 
 void merge(vector<int> &vet, int l, int m, int r) {
     int i, j, k;
-    int n1 = m - l + 1;
-    int n2 = r - m;
     vector<int> L, R;
     
-    for(i = 0; i < n1; i++)
-        L.push_back(vet[l + i]);
-    for(j = 0; j < n2; j++)
-        R.push_back(vet[m + 1 + j]);
+    for(i = l; i <= m; i++)
+        L.push_back(vet[i]);
+    for(j = m + 1; j <= r; j++)
+        R.push_back(vet[j]);
 
     i = j = 0;
     k = l;
