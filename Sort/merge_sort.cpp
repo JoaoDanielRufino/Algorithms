@@ -19,7 +19,7 @@ void merge(vector<int> &vet, int l, int m, int r) {
 
     i = j = 0;
     k = l;
-    while(i < n1 && j < n2) {
+    while(i < L.size() && j < R.size()) {
         if(L[i] <= R[j])
             vet[k] = L[i++];
         else
@@ -27,9 +27,9 @@ void merge(vector<int> &vet, int l, int m, int r) {
         k++;
     }
 
-    while(i < n1)
+    while(i < L.size())
         vet[k++] = L[i++];
-    while(j < n2)
+    while(j < R.size())
         vet[k++] = R[j++];
 }
 
