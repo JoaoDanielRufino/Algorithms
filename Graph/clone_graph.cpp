@@ -22,6 +22,9 @@ public:
     unordered_map<Node*, Node*> hash;
     
     Node* cloneGraph(Node* node) {
+        if(!node)
+            return nullptr;
+        
         if(!hash.count(node)) {
             hash[node] = new Node(node->val, node->neighbors);
             for(int i = 0; i < node->neighbors.size(); i++)
