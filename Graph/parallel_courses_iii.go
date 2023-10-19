@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/parallel-courses-iii/description
+
 func max(a, b int) int {
     if a < b {
         return b
