@@ -22,7 +22,7 @@ func beautifulSubsets(nums []int, k int) int {
     return solve(nums, k, map[int]int{}, 0)
 }
 
-// Wth for loop
+// with for loop
 func solve(nums []int, k int, subset map[int]int, start int) int {
     if start >= len(nums) {
         return 0
