@@ -35,3 +35,30 @@ public:
         return ans;      
     }
 };
+
+// recursive
+class Solution {
+public:
+    void traverse(TreeNode* root, int *prev, int *minDiff) {
+        if(!root)
+            return;
+
+        traverse(root->left, prev, minDiff);
+
+        if (*prev != INT_MIN) {
+            *minDiff = min(*minDiff, root->val - *prev);
+        }
+
+        *prev = root->val;
+
+        traverse(root->right, prev, minDiff);
+    }
+
+    int getMinimumDifference(TreeNode* root) {
+        int prev = INT_MIN, minDiff = INT_MAX;
+
+        traverse(root, &prev, &minDiff);
+
+        return minDiff;
+    }
+};
