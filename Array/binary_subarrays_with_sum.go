@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/binary-subarrays-with-sum/description/
+// the same logic also applies to https://leetcode.com/problems/count-number-of-nice-subarrays/description
 
 func numSubarraysWithSum(nums []int, goal int) int {
     ans, currSum := 0, 0
