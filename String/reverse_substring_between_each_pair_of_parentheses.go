@@ -52,3 +52,56 @@ func reverseParentheses(s string) string {
 
     return ans
 }
+
+// or adding string to stack
+type Stack struct {
+    arr []string
+}
+
+func (s *Stack) push(x string) {
+    s.arr = append(s.arr, x)
+}
+
+func (s *Stack) pop() string {
+    tmp := s.arr[len(s.arr)-1]
+    s.arr = s.arr[:len(s.arr)-1]
+    return tmp
+}
+
+func (s *Stack) len() int {
+    return len(s.arr)
+}
+
+func reverse(s string) string {
+    reversed := []rune(s)
+    start, end := 0, len(s)-1
+
+    for start < end {
+        reversed[start], reversed[end] = reversed[end], reversed[start]
+        start++
+        end--
+    }
+
+    return string(reversed)
+}
+
+func reverseParentheses(s string) string {
+    stack := &Stack{
+        arr: []string{""},
+    }
+
+    for i := range s {
+        if s[i] == '(' {
+            stack.push("")
+        } else if s[i] == ')' {
+            toReverse := stack.pop()
+            curr := stack.pop()
+            stack.push(curr + reverse(toReverse))
+        } else {
+            curr := stack.pop()
+            stack.push(curr + string(s[i]))
+        }
+    }
+
+    return stack.pop()
+}
