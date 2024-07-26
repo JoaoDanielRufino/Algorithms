@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/valid-mountain-array/description/
+
 func validMountainArray(arr []int) bool {
     if len(arr) < 3 {
         return false
