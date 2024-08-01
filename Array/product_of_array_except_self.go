@@ -27,23 +27,22 @@ func productExceptSelf(nums []int) []int {
 
 // more readable
 func productExceptSelf(nums []int) []int {
-    n := len(nums)
-    prefix, suffix := make([]int, n), make([]int, n)
-
+    prefix, suffix := make([]int, len(nums)), make([]int, len(nums)) 
+    
     prefix[0] = 1
-    suffix[0] = 1
-
-    for i := 1; i < n; i++ {
+    for i := 1; i < len(nums); i++ {
         prefix[i] = prefix[i-1] * nums[i-1]
-        suffix[i] = suffix[i-1] * nums[n-i]
     }
-
+    
+    suffix[len(nums)-1] = 1
+    for i := len(nums)-2; i >= 0; i-- {
+        suffix[i] = suffix[i+1] * nums[i+1]
+    }
+    
     ans := []int{}
-    for i := 0; i < n; i++ {
-        ans = append(ans, prefix[i] * suffix[n-1-i])
+    for i := range nums {
+        ans = append(ans, prefix[i] * suffix[i])
     }
-
-    fmt.Println(prefix, suffix)
-
+    
     return ans
 }
