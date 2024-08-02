@@ -105,3 +105,45 @@ func reverseParentheses(s string) string {
 
     return stack.pop()
 }
+
+// or recursive
+func reverse(s string) string {
+    runes := []rune(s)
+    l, r := 0, len(s)-1
+    
+    for l < r {
+        runes[l], runes[r] = runes[r], runes[l]
+        l++
+        r--
+    }
+    
+    return string(runes)
+}
+
+func solve(s string, start int, seen []bool) string {
+    ans := ""
+    
+    for i := start; i < len(s); i++ {
+        if seen[i] {
+            continue
+        }
+        
+        seen[i] = true
+        
+        if s[i] == '(' {
+            ans += solve(s, i+1, seen)
+        } else if s[i] == ')' {
+            return reverse(ans)
+        } else {
+            ans += string(s[i])
+        }
+    }
+    
+    return ans
+}
+
+func reverseParentheses(s string) string {
+    seen := make([]bool, len(s))
+    
+    return solve(s, 0, seen)
+}
