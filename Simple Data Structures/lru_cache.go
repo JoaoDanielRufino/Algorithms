@@ -1,5 +1,8 @@
 // https://leetcode.com/problems/lru-cache/description
 
+// Note: to better improve performance of List methods, consider using doubly linked list to get remove with O(1) complexity.
+// the current implementation uses a single linked list, so to remove a Node in the list is O(n) complexity.
+
 // using go List library
 type LRUCache struct {
     list *list.List
