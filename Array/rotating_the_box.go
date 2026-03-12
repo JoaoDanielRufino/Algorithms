@@ -40,16 +40,14 @@ func rotateGrid(grid [][]byte) [][]byte {
 func applyGravity(grid [][]byte) {
     m, n := len(grid), len(grid[0])
 
-    for i := range m {
-        fall := n-1
-        for j := n-1; j >= 0; j-- {
+    for j := range n {
+        fall := m-1
+        for i := m-1; i >= 0; i-- {
             if grid[i][j] == '*' {
-                fall = j-1
+                fall = i-1
             } else if grid[i][j] == '#'{
-                if fall != j {
-                    grid[i][fall] = '#'
-                    grid[i][j] = '.'
-                }
+                grid[i][j] = '.'
+                grid[fall][j] = '#'
                 fall--
             }
         }
@@ -57,9 +55,9 @@ func applyGravity(grid [][]byte) {
 }
 
 func rotateTheBox(boxGrid [][]byte) [][]byte {
-    applyGravity(boxGrid)
-
     rotated := rotateGrid(boxGrid)
+
+    applyGravity(rotated)
 
     return rotated
 }
